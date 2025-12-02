@@ -109,6 +109,7 @@ export default function ServicesPage() {
               price={service.price}
               duration={service.duration}
               badge={service.badge}
+              photo = {''}
             />
           ))}
         </div>
