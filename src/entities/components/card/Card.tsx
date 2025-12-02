@@ -1,5 +1,5 @@
 import Image from "next/image";
-export default function Card ({title, description, photo, price, duration, badge}) {
+export default function Card ({title, description, photo, price, duration, badge}:{title:string, description: string, photo: string, price: string, duration: string, badge: string}) {
    return (
     <div className="
       group
