@@ -109,6 +109,9 @@ export default function Home() {
               title={service.title}
               description={service.description}
               photo={service.photo}
+              duration={''}
+              price={''}
+              badge = {''}
             />
           ))}
         </div>
