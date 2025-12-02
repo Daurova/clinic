@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
+import Header from "./layout/Header";
+import Footer from "./layout/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +13,15 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+
+// Настройка шрифта
+const montserrat = Montserrat({
+  subsets: ['latin', 'cyrillic'], // поддерживаемые языки
+  weight: ['300', '400', '500', '600', '700'], // нужные начертания
+  display: 'swap', // для лучшей производительности
+  variable: '--font-montserrat', // CSS переменная (опционально)
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,11 +34,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ru" className="{montserrat.variable}">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{ fontFamily: 'var(--font-montserrat)' }}
       >
+        <Header></Header>
+         <main>
         {children}
+        </main>
+        <Footer></Footer>
       </body>
     </html>
   );

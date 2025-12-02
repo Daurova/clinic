@@ -1,103 +1,116 @@
-import Image from "next/image";
-
+import Card from "@/entities/components/card/Card";
+import TestSwiperPage from "@/entities/components/Swiper/Swiper";
+const services = [
+  {
+    id: 1,
+    title: "Контурная пластика",
+    description: "Коррекция и увеличение объема губ, скул, подбородка с помощью филлеров премиум-класса",
+    photo: "",
+    duration: "30-45 мин",
+    price: "от 15 000 ₽"
+  },
+  {
+    id: 2,
+    title: "Ботокс и диспорт",
+    description: "Инъекции для разглаживания морщин и коррекции мимических заломов",
+    photo: "",
+    duration: "20-30 мин",
+    price: "от 8 500 ₽"
+  },
+  {
+    id: 3,
+    title: "Лазерная эпиляция",
+    description: "Удаление волос навсегда на любых зонах с использованием современного лазера",
+    photo: "",
+    duration: "15-60 мин",
+    price: "от 3 500 ₽"
+  },
+  {
+    id: 4,
+    title: "Чистка лица",
+    description: "Профессиональная чистка лица с ультразвуком и механической обработкой",
+    photo: "",
+    duration: "1 час 15 мин",
+    price: "от 6 000 ₽"
+  },
+  {
+    id: 5,
+    title: "Химический пилинг",
+    description: "Глубокое обновление кожи, устранение пигментации и постакне",
+    photo: "",
+    duration: "40-60 мин",
+    price: "от 7 500 ₽"
+  },
+  {
+    id: 6,
+    title: "Мезотерапия",
+    description: "Введение витаминных коктейлей и гиалуроновой кислоты для омоложения",
+    photo: "",
+    duration: "30-40 мин",
+    price: "от 5 000 ₽"
+  },
+  {
+    id: 7,
+    title: "RF-лифтинг",
+    description: "Радиочастотный лифтинг для подтяжки кожи и сокращения морщин",
+    photo: "",
+    duration: "45-60 мин",
+    price: "от 12 000 ₽"
+  },
+  {
+    id: 8,
+    title: "Плазмотерапия",
+    description: "Омоложение с использованием собственной плазмы пациента (PRP-терапия)",
+    photo: "",
+    duration: "30-45 мин",
+    price: "от 9 000 ₽"
+  },
+  {
+    id: 9,
+    title: "Нитевой лифтинг",
+    description: "3D-подтяжка лица и тела с использованием биоразлагаемых нитей",
+    photo: "",
+    duration: "1-2 часа",
+    price: "от 35 000 ₽"
+  },
+  {
+    id: 10,
+    title: "Коррекция фигуры",
+    description: "Комплекс процедур для коррекции веса и коррекции силуэта",
+    photo: "",
+    duration: "60-90 мин",
+    price: "от 8 000 ₽"
+  },
+  {
+    id: 11,
+    title: "Лечение акне",
+    description: "Комплексный подход к лечению проблемной кожи и постакне",
+    photo: "",
+    duration: "1 час",
+    price: "от 6 500 ₽"
+  },
+  {
+    id: 12,
+    title: "Пилинг Джесснера",
+    description: "Глубокое обновление кожи для выравнивания тона и текстуры",
+    photo: "",
+    duration: "45 мин",
+    price: "от 10 000 ₽"
+  }
+];
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+  return(
+    <>
+    <TestSwiperPage></TestSwiperPage>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service) => (
+            <Card
+              key={service.id}
+              title={service.title}
+              description={service.description}
+              photo={service.photo}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+        </>)
 }
