@@ -34,7 +34,7 @@ export default function ContactsPage() {
                   <div>
                     <div className="font-bold text-gray-800 mb-1">Адрес</div>
                     <div className="text-gray-600">г. Владикавказ, ул. Александра Козаева, д. 10</div>
-                    <div className="text-gray-500 text-sm mt-1">БЦ "Название", 2 этаж</div>
+                    <div className="text-gray-500 text-sm mt-1">БЦ &quot;Название&quot;, 2 этаж</div>
                   </div>
                 </div>
 

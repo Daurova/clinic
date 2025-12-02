@@ -121,7 +121,7 @@ export default function ReviewsPage() {
               {/* Ответ клиники (если есть) */}
               <div className="pt-4 border-t border-gray-100">
                 <div className="text-sm text-gray-500 italic">
-                  "Спасибо за ваш отзыв! Рады, что вы остались довольны результатом."
+                  &quot;Спасибо за ваш отзыв! Рады, что вы остались довольны результатом.&quot;
                 </div>
               </div>
             </div>
