@@ -26,7 +26,7 @@ export default function Card ({title, description, photo, price, duration, badge
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="
-              object-cover
+              object-contain
               group-hover:scale-110
               transition-transform
               duration-700

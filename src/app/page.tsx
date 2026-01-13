@@ -5,7 +5,7 @@ const services = [
     id: 1,
     title: "Контурная пластика",
     description: "Коррекция и увеличение объема губ, скул, подбородка с помощью филлеров премиум-класса",
-    photo: "",
+    photo: "/images/hearts.jpg",
     duration: "30-45 мин",
     price: "от 15 000 ₽"
   },
@@ -45,7 +45,7 @@ const services = [
     id: 6,
     title: "Мезотерапия",
     description: "Введение витаминных коктейлей и гиалуроновой кислоты для омоложения",
-    photo: "",
+    photo: "/images/preparaty.jpg",
     duration: "30-40 мин",
     price: "от 5 000 ₽"
   },
@@ -53,7 +53,7 @@ const services = [
     id: 7,
     title: "RF-лифтинг",
     description: "Радиочастотный лифтинг для подтяжки кожи и сокращения морщин",
-    photo: "",
+    photo: "/images/rfapparat.jpg",
     duration: "45-60 мин",
     price: "от 12 000 ₽"
   },
@@ -61,7 +61,7 @@ const services = [
     id: 8,
     title: "Плазмотерапия",
     description: "Омоложение с использованием собственной плазмы пациента (PRP-терапия)",
-    photo: "",
+    photo: "/images/kapelnica.jpg",
     duration: "30-45 мин",
     price: "от 9 000 ₽"
   },
@@ -77,7 +77,7 @@ const services = [
     id: 10,
     title: "Коррекция фигуры",
     description: "Комплекс процедур для коррекции веса и коррекции силуэта",
-    photo: "",
+    photo: "/images/rfzhivot.jpg",
     duration: "60-90 мин",
     price: "от 8 000 ₽"
   },

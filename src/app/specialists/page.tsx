@@ -1,4 +1,5 @@
 // app/specialists/page.tsx
+import Image from "next/image";
 const specialists = [
   {
     id: 1,
@@ -6,7 +7,7 @@ const specialists = [
     position: "Врач-косметолог",
     experience: "12 лет",
     specialization: ["Контурная пластика", "Ботокс", "Нитевой лифтинг"],
-    image: "/images/specialists/1.jpg",
+    image: "/images/doctor1.jpg",
     description: "Сертифицированный специалист по инъекционным методикам"
   },
   {
@@ -15,7 +16,7 @@ const specialists = [
     position: "Дерматокосметолог",
     experience: "8 лет",
     specialization: ["Лечение акне", "Пилинги", "Лазерные процедуры"],
-    image: "/images/specialists/2.jpg",
+    image: "/images/doctor2.jpg",
     description: "Эксперт в области аппаратной косметологии"
   },
   {
@@ -24,7 +25,7 @@ const specialists = [
     position: "Косметолог-эстетист",
     experience: "6 лет",
     specialization: ["Уходовые процедуры", "Массаж лица", "Чистки"],
-    image: "/images/specialists/3.jpg",
+    image: "/images/doctor3.jpg",
     description: "Специалист по уходовым программам"
   },
   {
@@ -33,7 +34,7 @@ const specialists = [
     position: "Трихолог",
     experience: "10 лет",
     specialization: ["Лечение волос", "Плазмотерапия", "Мезотерапия"],
-    image: "/images/specialists/4.jpg",
+    image: "/images/doctor4.jpg",
     description: "Эксперт в области здоровья волос и кожи головы"
   },
 ];
@@ -62,7 +63,7 @@ export default function SpecialistsPage() {
               {/* Фото специалиста */}
               <div className="h-64 bg-gradient-to-br from-gray-200 to-gray-300 relative overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-5xl">👩‍⚕️</div>
+                  < Image src ={specialist.image} fill className="object-contain" alt = "фото доктора"></Image>
                 </div>
                 <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gray-700">
                   Опыт: {specialist.experience}
